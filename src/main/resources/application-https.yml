@@ -1,0 +1,6 @@
+server:
+  port: 8443
+  ssl:
+    key-store:          classpath:tomcat.keys
+    key-store-password: 471108
+    key-password:       471108
