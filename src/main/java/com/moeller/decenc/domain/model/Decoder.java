@@ -1,4 +1,4 @@
-package com.moeller.decenc.business;
+package com.moeller.decenc.domain.model;
 
 import java.util.Base64;
 import org.slf4j.Logger;
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by Bernd on 13.10.2017.
  *
- * Package com.moeller.decenc.business
+ * Package com.moeller.decenc.domain
  */
 public class Decoder {
 

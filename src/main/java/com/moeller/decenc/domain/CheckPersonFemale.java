@@ -1,11 +1,11 @@
-package com.moeller.decenc.business;
+package com.moeller.decenc.domain;
 
-import com.moeller.decenc.business.Person.Sex;
+import com.moeller.decenc.domain.Person.Sex;
 
 /**
  * Created by Bernd on 10.10.2017.
  *
- * Package com.moeller.decenc.business
+ * Package com.moeller.decenc.domain
  */
 public class CheckPersonFemale implements CheckPerson{
 

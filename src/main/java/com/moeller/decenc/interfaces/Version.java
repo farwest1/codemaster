@@ -1,4 +1,4 @@
-package com.moeller.decenc.api;
+package com.moeller.decenc.interfaces;
 
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Created by Bernd on 17.10.2017.
  *
- * Package com.moeller.decenc.api
+ * Package com.moeller.decenc.interfaces
  */
 @XmlRootElement
 public final class Version {

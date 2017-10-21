@@ -1,6 +1,6 @@
 package hello;
 
-import com.moeller.decenc.business.LamdaTest;
+import com.moeller.decenc.domain.LamdaTest;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 

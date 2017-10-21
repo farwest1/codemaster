@@ -1,13 +1,14 @@
-package com.moeller.decenc.business;
+package com.moeller.decenc.domain;
 
 import static org.junit.Assert.*;
 
+import com.moeller.decenc.domain.model.Decoder;
 import org.junit.Test;
 
 /**
  * Created by Bernd on 14.10.2017.
  *
- * Package com.moeller.decenc.business
+ * Package com.moeller.decenc.domain
  */
 public class DecoderTest {
 
