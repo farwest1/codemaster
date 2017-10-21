@@ -3,6 +3,7 @@ package com.moeller.decenc.interfaces;
 import static org.springframework.http.ResponseEntity.ok;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +26,9 @@ public class VersionController {
       value = "/version",
       produces = {"application/xml", "application/json"},
       method = RequestMethod.GET)
-  public ResponseEntity<Version> getVersion(HttpServletRequest request){
+  public ResponseEntity<Version> getVersion(HttpServletRequest request, HttpServletResponse response){
     LOGGER.info("Caller Ip: " + request.getRemoteAddr());
+    response.setHeader("X-IPAddress", request.getRemoteHost());
     return ResponseEntity.ok(new Version());
   }
 
