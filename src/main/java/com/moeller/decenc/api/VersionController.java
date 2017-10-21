@@ -1,5 +1,8 @@
 package com.moeller.decenc.api;
 
+import static org.springframework.http.ResponseEntity.ok;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VersionController {
 
-  @RequestMapping("/version")
-  public String getVersion(){
-    return "0.9";
+  @RequestMapping(
+      value = "/version",
+      produces = {"application/xml", "application/json"})
+  public ResponseEntity<Version> getVersion(){
+    return ResponseEntity.ok(new Version());
   }
 
 }
