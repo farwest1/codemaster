@@ -1,5 +1,6 @@
 package com.moeller.decenc.domain.model;
 
+import java.util.UUID;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -11,24 +12,47 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Probe {
 
-  private String plainText;
-  private String base64Text;
+  public enum CalcType {
+    BASE64,
+    URLENCODE
+  }
+  private UUID id;
+  private String inputText;
+  private String resultText;
+  private CalcType calcType;
 
 
 
-  public String getPlainText() {
-    return plainText;
+
+  public String getInputText() {
+    return inputText;
   }
 
-  public void setPlainText(String plainText) {
-    this.plainText = plainText;
+  public void setInputText(String inputText) {
+    this.inputText = inputText;
   }
 
-  public String getBase64Text() {
-    return base64Text;
+  public String getResultText() {
+    return resultText;
   }
 
-  public void setBase64Text(String base64Text) {
-    this.base64Text = base64Text;
+  public void setResultText(String resultText) {
+    this.resultText = resultText;
+  }
+
+  public UUID getId() {
+    return id;
+  }
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+  public CalcType getCalcType() {
+    return calcType;
+  }
+
+  public void setCalcType(CalcType calcType) {
+    this.calcType = calcType;
   }
 }
