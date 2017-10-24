@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public final class Version {
   private int major = 0;
   private int minor = 1;
+  private int fix = 0;
 
   public Version() {
   }
@@ -30,5 +31,13 @@ public final class Version {
 
   public void setMinor(int minor) {
     this.minor = minor;
+  }
+
+  public int getFix() {
+    return fix;
+  }
+
+  public void setFix(int fix) {
+    this.fix = fix;
   }
 }
