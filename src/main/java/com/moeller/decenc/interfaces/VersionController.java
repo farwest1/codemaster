@@ -2,6 +2,7 @@ package com.moeller.decenc.interfaces;
 
 import static org.springframework.http.ResponseEntity.ok;
 
+import com.moeller.decenc.domain.model.Version;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;

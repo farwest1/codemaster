@@ -1,6 +1,7 @@
-package com.moeller.decenc.interfaces;
+package com.moeller.decenc.domain.model;
 
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -9,6 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Package com.moeller.decenc.interfaces
  */
 @XmlRootElement
+@JsonPropertyOrder({"major","fix","minor"})
+//Todo: Order does not work for XML
 public final class Version {
   private int major = 0;
   private int minor = 1;
