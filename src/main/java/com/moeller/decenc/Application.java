@@ -1,5 +1,6 @@
 package com.moeller.decenc;
 
+import com.moeller.decenc.infrastructure.RaspberryPiGPIO;
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
 import java.util.Arrays;
@@ -9,6 +10,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Scope;
 
 @SpringBootApplication
 @EnablePrometheusEndpoint
@@ -32,6 +35,13 @@ public class Application {
             }
 
         };
+    }
+
+    @Bean( initMethod = "init")
+    @Scope("singleton")
+    @Profile("rpi")
+    public RaspberryPiGPIO raspberryPiGPIO(){
+        return new RaspberryPiGPIO();
     }
 
 }

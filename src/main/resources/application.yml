@@ -10,3 +10,7 @@ endpoints:
     sensitive: false
   trace:
       sensitive: false
+
+spring:
+  profiles:
+#    active: rpi
