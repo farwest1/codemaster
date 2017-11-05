@@ -17,6 +17,7 @@ public class VersionService {
 
   private Version version = new Version();
 
+
   public void setVersion(Version version){
     this.version.setFix(version.getFix());
     this.version.setMinor(version.getMinor());

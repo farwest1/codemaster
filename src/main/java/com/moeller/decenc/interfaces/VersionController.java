@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * Package com.moeller.decenc.interfaces
  */
-
 @RestController
 public class VersionController {
 
