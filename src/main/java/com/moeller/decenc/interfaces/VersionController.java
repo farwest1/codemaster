@@ -44,6 +44,7 @@ public class VersionController {
     Summary.Timer reqTimer = REQUEST_LATENCY.startTimer();
     try {
       LOGGER.info("Caller Ip: " + request.getRemoteAddr());
+      LOGGER.info("Caller User: " + request.getRemoteUser());
       LOGGER.info("Blink LED");
       if (raspberryPiGPIO != null) {
           raspberryPiGPIO.getOutputPin().pulse(1000, PinState.HIGH);
