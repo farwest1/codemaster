@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'" />
+<p th:text="'Version: ' + ${version.minor}" />
+
+<form action="#" th:action="@{/config}" th:object="${version}" method="post">
+  <input type="text" th:field="*{minor}"/>
+  <button name="save" value="save" type="submit">Submit</button>
+</form>
+
+</body>
+</html>

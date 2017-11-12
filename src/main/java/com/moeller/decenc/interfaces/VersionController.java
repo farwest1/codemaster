@@ -57,10 +57,15 @@ public class VersionController {
     }
     return ResponseEntity.ok(versionService.getVersion());
   }
+
+
+
+
   @RequestMapping(
-    method = RequestMethod.POST,
-    consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE},
-    produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+      value = "/version",
+      method = RequestMethod.POST,
+      consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE},
+      produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
   public ResponseEntity<Version> setVersion(@RequestBody Version version){
     versionService.setVersion(version);
     return ResponseEntity.accepted().body(version);

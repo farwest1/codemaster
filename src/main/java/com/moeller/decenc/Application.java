@@ -1,5 +1,6 @@
 package com.moeller.decenc;
 
+import com.moeller.decenc.domain.service.VersionService;
 import com.moeller.decenc.infrastructure.RaspberryPiGPIO;
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
@@ -43,5 +44,10 @@ public class Application {
     public RaspberryPiGPIO raspberryPiGPIO(){
         return new RaspberryPiGPIO();
     }
+
+//    @Bean
+//    public VersionService versionService(){
+//        return new VersionService();
+//    }
 
 }
