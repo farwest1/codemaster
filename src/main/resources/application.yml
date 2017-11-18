@@ -11,6 +11,10 @@ endpoints:
   trace:
       sensitive: false
 
+
+
 spring:
   profiles:
 #    active: rpi
+  thymeleaf:
+    cache: false

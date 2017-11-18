@@ -5,8 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
-<p th:text="'Version: ' + ${version.minor}" />
+<div class="container">
+  <p th:text="#{greeting} +', ' + ${name} + '!'" />
+  <p th:text="'Version: ' + ${version.minor}" />
+</div>
 
 <form action="#" th:action="@{/config}" th:object="${version}" method="post">
   <input type="text" th:field="*{minor}"/>

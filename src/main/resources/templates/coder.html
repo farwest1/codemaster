@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+  <body>
+  <div class="container">
+    <h1 th:text="#{coder.title}">Title</h1>
+    <p th:text="#{coder.instruction}" />
+  </div>
+  <form action="#" th:action="@{/coder.html}" th:object="${codeData}" method="post">
+    <label th:for="${#ids.next('plainData')}" th:text="#{coder.form.label}">Clear text:</label>
+    <input type="text" class="inp" th:field="*{plainData}" name="plainTextInput"/>
+    <button type="submit" class="but" name="submit" th:text="#{coder.form.submit}">Encode</button>
+  </form>
+  </body>
+</html>
