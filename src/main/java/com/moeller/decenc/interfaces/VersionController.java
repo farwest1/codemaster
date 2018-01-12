@@ -28,7 +28,7 @@ public class VersionController {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(VersionController.class);
   static final Counter REQUESTS = Counter.build().name("version_requests_total").help("Total requests.").register();
-  static final Summary REQUEST_LATENCY = Summary.build().name("requests_latency_seconds").help("Request latency in seconds.").register();
+  static final Summary REQUEST_LATENCY = Summary.build().quantile(0.5,0.05).name("requests_latency_seconds").help("Request latency in seconds.").register();
 
   @Autowired(required = false)
   private RaspberryPiGPIO raspberryPiGPIO;

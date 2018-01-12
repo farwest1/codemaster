@@ -1,11 +1,9 @@
 package com.moeller.decenc;
 
-import com.moeller.decenc.domain.service.VersionService;
 import com.moeller.decenc.infrastructure.RaspberryPiGPIO;
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
 import java.util.Arrays;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
