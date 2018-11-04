@@ -46,6 +46,8 @@ public class VersionController {
       LOGGER.info("Caller Ip: " + request.getRemoteAddr());
       LOGGER.info("Caller User: " + request.getRemoteUser());
       LOGGER.info("Blink LED");
+      LOGGER.info("Api-Key: {}", request.getHeader("X-ApiKey"));
+
       if (raspberryPiGPIO != null) {
           raspberryPiGPIO.getOutputPin().pulse(1000, PinState.HIGH);
       }
